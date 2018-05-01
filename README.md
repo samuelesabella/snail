@@ -1,5 +1,5 @@
 # Snail - beta
-A very simple installation for a very nice looking PS1
+A very simple installation for a very nice looking PS1 (macOS only)
 #### installation
 Once you've download the repo, open Terminal and run the installer with root permissions by typing:
 ```
