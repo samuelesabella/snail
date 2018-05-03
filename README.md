@@ -1,18 +1,18 @@
 # Snail - beta
 A very simple installation for a very nice looking PS1. Linux systems are not fully supported.
-#### install (macOS)
+#### Installation (macOS)
 Once you've download the repo, enter the directory and run the installer by typing:
 ```
 $ sh install.sh
 ```
 A new Terminal window should be opened. If so go to *"Terminal>Preferences>Profiles"* and set *snail* as default profile.
-#### install (Linux)
+#### Installation (Linux)
 Once you've download the repo, enter the directory and run the installer by typing:
 ```
 $ bash install.sh
 ```
 Then go to *"edit>Profile Preferences"* and change the font into FiraCode.
-#### uninstall
+#### Uninstallation
 Open Terminal and type:
 ```
 $ goodbyesnail
