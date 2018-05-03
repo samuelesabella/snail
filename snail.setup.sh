@@ -45,7 +45,11 @@ snail_workdir="\\w"
 
 # ----- ----- SNAIL ----- ----- #
 goodbyeSnail(){
-  sudo sh ~/.snail/unistall.sh
+  if [[ "$OSTYPE" == "linux-gnu" ]]; then
+    sudo bash ~/.snail/unistall.sh
+  elif [[ "$OSTYPE" == "darwin"* ]]; then
+    sudo sh ~/.snail/unistall.sh
+  fi
 }
 
 snail_parser() {
@@ -55,8 +59,7 @@ snail_parser() {
   # Preparing colors and words
   for word in $theme; do
     if [[ $word = "("*")" ]]; then
-      aus="${word//(}"
-      colors+=("${aus//)}")
+      colors+=($(echo "$word " | tr -d \( | tr -d \)))
     fi
     words+=("$word")
   done

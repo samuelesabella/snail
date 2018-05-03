@@ -1,7 +1,13 @@
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  PROFILE=~/.bashrc
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  PROFILE=~/.bash_profile
+fi
+
 cd ~/
-sed '/^\# snail/,/\# endsnail/d' .bash_profile > .tmp
-mv .bash_profile .bash_profile.backup
-mv .tmp .bash_profile
+sed '/^\# snail/,/\# endsnail/d' $PROFILE > .tmp
+mv $PROFILE .profile.backup
+mv .tmp $PROFILE
 cd -
 
 sudo rm -rf ~/.snail

@@ -1,6 +1,14 @@
-FONTDIR=~/Library/Fonts/FiraCode
 SNAIL=~/.snail
-PROFILE=~/.bash_profile
+
+if [[ "$OSTYPE" == "linux-gnu" ]]; then
+  PROFILE=~/.bashrc
+  FONTDIR=/usr/share/fonts/FiraCode
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+  PROFILE=~/.bash_profile
+  FONTDIR=~/Library/Fonts/FiraCode
+  SNAIL_PROFILE="snail.terminal"
+fi
+
 
 if ! grep -Fxq "# snail" $PROFILE
 then
@@ -11,7 +19,7 @@ sudo -k
 
 if ! [ -d "$FONTDIR" ]; then
   git clone https://github.com/tonsky/FiraCode
-  mv FiraCode/distr/ttf/ $FONTDIR
+  sudo mv FiraCode/distr/ttf/ $FONTDIR
   rm -rf FiraCode
 fi
 
@@ -21,4 +29,6 @@ then
   sudo chown root ~/.snail/unistall.sh
 fi
 
-open snail.terminal
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  open snail.terminal
+fi
