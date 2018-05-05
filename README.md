@@ -11,7 +11,7 @@ Once you've download the repo, enter the directory and run the installer by typi
 ```
 $ bash install.sh
 ```
-Then go to *"edit>Profile Preferences"* and change the font into FiraCode.
+Then go to *"edit>Profile Preferences"* and change the font into FiraCode, then set yourself a good looking color scheme (next update will provide automatic terminal profile import).
 #### Uninstallation
 Open Terminal and type:
 ```
