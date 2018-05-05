@@ -10,9 +10,9 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 fi
 
 
-if ! grep -Fxq "# snail" $PROFILE
+if ! grep "# snail" $PROFILE
 then
-  sudo sh -c "cat ./snail.setup.sh >> $PROFILE"
+  echo "source ~/.snail/setup.snail # snail" >> $PROFILE
 fi
 
 sudo -k
@@ -26,7 +26,6 @@ fi
 if ! [ -d "~/.snail" ]
 then
   cp -R snail/ ~/.snail
-  sudo chown root ~/.snail/unistall.sh
 fi
 
 if [[ "$OSTYPE" == "darwin"* ]]; then

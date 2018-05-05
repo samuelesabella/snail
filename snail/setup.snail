@@ -1,5 +1,4 @@
 
-# snail
 # ----- ----- EASY COLORS ----- ----- #
 blk_snail=0
 red_snail=1; red_snail_=9
@@ -46,9 +45,9 @@ snail_workdir="\\w"
 # ----- ----- SNAIL ----- ----- #
 goodbyeSnail(){
   if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    sudo bash ~/.snail/unistall.sh
+    bash ~/.snail/unistall.sh
   elif [[ "$OSTYPE" == "darwin"* ]]; then
-    sudo sh ~/.snail/unistall.sh
+    sh ~/.snail/unistall.sh
   fi
 }
 
@@ -111,4 +110,3 @@ if [ -e ~/.snail/theme.snail ]; then
   themeexpansion=$(eval echo $parsedtheme)
   PS1=${themeexpansion}
 fi
-# endsnail
