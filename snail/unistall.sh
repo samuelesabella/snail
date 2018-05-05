@@ -4,5 +4,5 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
   PROFILE=~/.bash_profile
 fi
 
-sed "/# snail/d" $PROFILE > $PROFILE
+sed -i ".backup" "/# snail/d" $PROFILE
 rm -rf ~/.snail
