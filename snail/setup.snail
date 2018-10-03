@@ -110,3 +110,6 @@ if [ -e ~/.snail/theme.snail ]; then
   themeexpansion=$(eval echo $parsedtheme)
   PS1=${themeexpansion}
 fi
+
+# ----- ----- ALIAS ----- ----- #
+source ~/.snail/alias.snail
