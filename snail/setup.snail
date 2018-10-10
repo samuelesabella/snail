@@ -45,9 +45,9 @@ snail_workdir="\\w"
 # ----- ----- SNAIL ----- ----- #
 goodbyeSnail(){
   if [[ "$OSTYPE" == "linux-gnu" ]]; then
-    bash ~/.snail/unistall.sh
+    bash ~/.snail/uninstall.sh
   elif [[ "$OSTYPE" == "darwin"* ]]; then
-    sh ~/.snail/unistall.sh
+    sh ~/.snail/uninstall.sh
   fi
 }
 
