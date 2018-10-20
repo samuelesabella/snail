@@ -32,11 +32,11 @@ $ goodbyesnail
 
 
 ## Customization
-Snail offers two type of customization: themes and greetings. Greetings are
+Snail offers three type of customization: themes, greetings and aliases. Greetings are
 what the terminal will show once opened. To change greetings, just edit the
 file **"~/.snail/greetings.snail"**. To change the *PS1* format edit the
 **~/.snail/theme.snail** file. More details on how the theming works can be
-found inside that file.
+found inside that file. Aliases can be putted in **~/.snail/alias.snail**. You will find an example inside the file.
 
 
 ## Under the hood
